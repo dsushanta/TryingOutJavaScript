@@ -9,6 +9,7 @@ user = login("johnyb@cartoonnetwork.com", "ohhmama");
 console.log(user);
 console.log("End");
 
+// Synchronous programming
 
 function login(email, pwd) {
   setTimeout((_) => {
