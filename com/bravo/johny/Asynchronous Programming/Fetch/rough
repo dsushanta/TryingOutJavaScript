@@ -1,0 +1,9 @@
+https://gorest.co.in/public-api/users
+https://gorest.co.in/public-api/users/USER_ID/todos
+
+
+
+
+userId = getUserId(email)
+firstTodo = getFirstTodo(userId);
+print(firstTodo)

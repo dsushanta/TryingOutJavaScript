@@ -1,42 +1,34 @@
-function login(email, pwd) {
-  return new Promise((resolve, reject) => {
-    setTimeout((_) => {
-      if (email.includes("@")) {
-        console.log(email);
-        resolve({ email: email });
-      } else {
-        reject(new Error("Invalid Username / Password"));
-      }
-    }, 3000);
-  });
+async function login(email, pwd) {
+  let userObject;
+  setTimeout((_) => {
+    if (email.includes("@")) {
+      console.log(email);
+      userObject = { "email": email };
+    }
+  }, 3000);
+  return userObject;
 }
 
-function getUserName(email) {
-  return new Promise((resolve, reject) => {
-    setTimeout((_) => {
-      let userName = email.split("@")[0];
-      console.log(userName);
-      resolve(userName);
-    }, 2000);
-  });
+async function getUserName(email) {
+  setTimeout((_) => {
+    let userName = email.split("@")[0];
+    console.log(userName);
+  }, 2000);
+  return await userName;
 }
 
-function getVideos(userName) {
-  return new Promise((resolve, reject) => {
-    setTimeout((_) => {
-      let videoIds = ["videoId1", "videoId2", "videoId3"];
-      console.log(videoIds);
-      resolve(videoIds);
-    }, 2000);
-  });
+async function getVideos(userName) {
+  setTimeout((_) => {
+    const videoIds = ["videoId1", "videoId2", "videoId3"];
+    console.log(videoIds);
+  }, 2000);
+  return await videoIds;
 }
 
-function getVideoTitle(videoTitle) {
-  return new Promise((resolve, reject) => {
-    setTimeout((_) => {
-      resolve("Title of VIdeo 1");
+async function getVideoTitle(videoTitle) {
+  setTimeout((_) => {
+      console.log("Title of VIdeo 1");
     }, 2000);
-  });
 }
 
 async function getVideoTitleFromUser() {

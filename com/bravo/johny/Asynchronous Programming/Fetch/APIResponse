@@ -1,0 +1,66 @@
+// ------------------ User API Response -------------------------
+
+{
+  "code": 200,
+  "meta": {
+    "pagination": {
+      "total": 1411,
+      "pages": 71,
+      "page": 1,
+      "limit": 20
+    }
+  },
+  "data": [
+    {
+      "id": 1,
+      "name": "Uma Patil",
+      "email": "patil_uma@medhurst.biz",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2020-10-08T03:50:04.219+05:30",
+      "updated_at": "2020-10-08T03:50:04.219+05:30"
+    },
+    {
+      "id": 2,
+      "name": "Bheeshma Saini Jr.",
+      "email": "damomca@gmail.com",
+      "gender": "Female",
+      "status": "Active",
+      "created_at": "2020-10-08T03:50:04.235+05:30",
+      "updated_at": "2020-10-08T04:01:43.815+05:30"
+    }
+  ]
+}
+
+
+// ------------------ Todo API Response -------------------------
+
+{
+  "code": 200,
+  "meta": {
+    "pagination": {
+      "total": 2,
+      "pages": 1,
+      "page": 1,
+      "limit": 20
+    }
+  },
+  "data": [
+    {
+      "id": 186,
+      "user_id": 123,
+      "title": "Sum triduana dolorem adimpleo tot.",
+      "completed": false,
+      "created_at": "2020-10-08T03:50:06.342+05:30",
+      "updated_at": "2020-10-08T03:50:06.342+05:30"
+    },
+    {
+      "id": 187,
+      "user_id": 123,
+      "title": "Ventito cognatus clibanus amaritudo cultura modi audacia suscipit constans stillicidium.",
+      "completed": false,
+      "created_at": "2020-10-08T03:50:06.344+05:30",
+      "updated_at": "2020-10-08T03:50:06.344+05:30"
+    }
+  ]
+}
