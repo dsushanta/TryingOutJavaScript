@@ -12,7 +12,7 @@ const getUserId = async (userEmail) => {
         userId = userObject.id;
       }
     });
-    return userId;
+    return await userId;
 }
 
 const getUsersFirstTodo = async (userId) => {
