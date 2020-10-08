@@ -3,4 +3,4 @@ let i = 0;
 setInterval(() => {
   console.log(i);
   i++;
-}, 2000);
+}, 3000);
