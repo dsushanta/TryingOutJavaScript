@@ -1,6 +1,12 @@
+
+// Var -> Function scoped
+// Let -> Block scoped
+
+
 // calling x after definition via var
 var x = 5;
 console.log(x);
+console.log(global.x);
 
 // calling y after definition via let
 let y = 10;
@@ -13,6 +19,11 @@ var z = 2;
 // calling let a before definition will give error
 //  console.log(a);
 //  let a = 3;
+
+let f1 = function () {
+  var i = 10;
+}
+//console.log(i);  // throws error
 
 {
   let d = 60;

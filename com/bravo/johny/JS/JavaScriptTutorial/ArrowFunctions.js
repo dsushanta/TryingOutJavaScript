@@ -27,7 +27,7 @@ const friends = [
     }
 ];
 
-let search = friends.filter( (friend) => friend.Age >= 30);
+let search = friends.filter(friend => friend.Age >= 30);
 
 console.log(typeof search);
 console.log(search);

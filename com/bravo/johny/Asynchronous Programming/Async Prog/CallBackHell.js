@@ -1,4 +1,4 @@
-function login(email, pwd, callback) {
+function login(email, pwd, callback, reject) {
   setTimeout((_) => {
     if (email.includes("@")) {
       console.log(email);
@@ -33,14 +33,19 @@ function getVideoTitle(videoTitle, callback) {
 
 console.log("Start");
 
-login("johnyb@cartoonnetwork.com", "ohhmama", (userObject) => {
-  getUserName(userObject.email, (userName) => {
-    getVideos(userName, (videoIds) => {
-      getVideoTitle(videoIds[0], (title) => {
-        console.log(title);
+login(
+  "johnybcartoonnetwork.com",
+  "ohhmama",
+  (userObject) => {
+    getUserName(userObject.email, (userName) => {
+      getVideos(userName, (videoIds) => {
+        getVideoTitle(videoIds[0], (title) => {
+          console.log(title);
+        });
       });
     });
-  });  
-});
+  },
+  err => console.log(err.message)
+);
 
 console.log("End");

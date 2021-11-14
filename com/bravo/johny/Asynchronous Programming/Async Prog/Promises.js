@@ -15,8 +15,12 @@ function getUserName(email) {
     return new Promise((resolve, reject) => {
         setTimeout((_) => {
             let userName = email.split("@")[0];
-            console.log(userName);
-            resolve(userName);
+            if (userName.length >= 12) {
+                console.log(userName);
+                resolve(userName);    
+            } else {
+                reject("username is too small");
+            }
         }, 2000);
     });
 }
@@ -44,6 +48,7 @@ console.log("Start");
 
 login("johnyb@cartoonnetwork.com", "ohhmama")
     .then(userObject => getUserName(userObject.email))
+    .catch(message => console.log(message))
     .then(userName => getVideos(userName))
     .then(videoIds => getVideoTitle(videoIds[0]))
     .catch(err => console.log(err.message));

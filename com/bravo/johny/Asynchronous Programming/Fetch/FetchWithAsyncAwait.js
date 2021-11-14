@@ -4,9 +4,10 @@ const usersUrl = "https://gorest.co.in/public-api/users";
 let todoUrl = "https://gorest.co.in/public-api/users/USER_ID/todos";
 
 const getUserId = async (userEmail) => {
-    const allUsers = await fetch(usersUrl);
+    //const allUsers = await fetch(usersUrl);
+  const allUsers = { email: 'abc@z.com' }
     let userId;
-    let json = await allUsers.json();
+    let json = allUsers;
     json.data.map((userObject) => {
       if (userObject.email.includes(userEmail)) {
         userId = userObject.id;
@@ -28,5 +29,5 @@ const displayUsersFirstTodo = async (email) => {
     console.log(firstTodo);
 };
 
-let email = "tushar_chaturvedi@conroy.biz";
+let email = "esha_dvm_verma@jenkins-streich.biz";
 displayUsersFirstTodo(email);

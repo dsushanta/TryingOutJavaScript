@@ -16,8 +16,15 @@ const friends = [
     }
 ];
 
+console.log(typeof friends);
+
 let friendChar = friends.find(function(friend) {
     return friend.Name === "Joey";
 });
 
+let friendChar1 = friends.find(
+    (friend) => friend.Name === "Chandler" || friend.Name === "Ross");
+
 console.log(friendChar);
+
+console.log(friendChar1);
