@@ -15,6 +15,8 @@ console.log(b);
 const c = ["Hello", 2, true];
 c[1] = 3;
 
-c = [5];
+//c = [5];
+
+c.push({"a":2});
 
 console.log(c);
