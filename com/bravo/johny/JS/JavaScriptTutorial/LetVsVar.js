@@ -22,7 +22,7 @@ var z = 2;
 
 let f1 = function () {
   var i = 10;
-}
+};
 //console.log(i);  // throws error
 
 {

@@ -7,24 +7,24 @@
 
 let length = (string) => string.length;
 
-console.log(length("How you doing !!"));
+console.log(length('How you doing !!'));
 
 const friends = [
-    {
-        "Name" : "Joey",
-        "Age" : 30,
-        "FavoriteDialogue" : "How you Doing !!"
-    },
-    {
-        "Name" : "Chandler",
-        "Age" : 32,
-        "FavoriteDialogue" : "I am not very good at advice, can i interest you in a sracastic comment !!"
-    },
-    {
-        "Name" : "Ross",
-        "Age" : 29,
-        "FavoriteDialogue" : "We were on a break !!"
-    }
+  {
+    'Name' : 'Joey',
+    'Age' : 30,
+    'FavoriteDialogue' : 'How you Doing !!'
+  },
+  {
+    'Name' : 'Chandler',
+    'Age' : 32,
+    'FavoriteDialogue' : 'I am not very good at advice, can i interest you in a sracastic comment !!'
+  },
+  {
+    'Name' : 'Ross',
+    'Age' : 29,
+    'FavoriteDialogue' : 'We were on a break !!'
+  }
 ];
 
 let search = friends.filter(friend => friend.Age >= 30);

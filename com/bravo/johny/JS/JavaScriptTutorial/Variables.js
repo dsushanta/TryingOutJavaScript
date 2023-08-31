@@ -1,7 +1,7 @@
 let a = 10;
 a = a + 10;
 
-console.log("Value of a = " + a);
+console.log('Value of a = ' + a);
 
 global.f = 7;
 
@@ -14,12 +14,12 @@ b.x = 1;
 
 console.log(b);
 
-const c = ["Hello", 2, true];
+const c = ['Hello', 2, true];
 c[1] = 3;
-c[2] = "world"
+c[2] = 'world';
 
 //c = [5];
 
-c.push({"a":2});
+c.push({'a':2});
 
 console.log(c);

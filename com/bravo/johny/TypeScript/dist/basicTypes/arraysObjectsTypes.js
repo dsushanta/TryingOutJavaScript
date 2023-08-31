@@ -1,4 +1,5 @@
 "use strict";
+// TOPICS : Object, array
 const person = {
     name: 'Joey',
     age: 32,
@@ -16,7 +17,7 @@ let favActors;
 favActors = ['Joey', 'Chandler'];
 // favActors = ['Monica', 2] throws error as the variable favActors is supposed to contain an array of strings only
 let favActors1;
-favActors1 = ['abc', 12, true];
+favActors1 = ['abc', 11, true];
 console.log(favActors);
 person1.hobbies.forEach(hobby => console.log(hobby.toUpperCase()));
 //# sourceMappingURL=arraysObjectsTypes.js.map

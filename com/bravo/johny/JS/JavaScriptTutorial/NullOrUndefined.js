@@ -6,7 +6,5 @@
 var temperature = null;
 var temp;
 
-console.log("Temperature is : " + temperature);   // null
-console.log("Temperature is : " + temp);          // undefined
-
-var 
+console.log('Temperature is : ' + temperature); // null
+console.log('Temperature is : ' + temp); // undefined

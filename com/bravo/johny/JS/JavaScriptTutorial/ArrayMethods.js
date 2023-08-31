@@ -12,13 +12,13 @@ console.log(friends);
 
 // End
 
-friends.pop()
+friends.pop();
 console.log(friends);
 
 friends.push('Gunther');
 console.log(friends);
 
-friends[1] = 'janice'
+friends[1] = 'janice';
 console.log(friends);
 
 friends.splice(3, 1, 'Richard');

@@ -1,7 +1,7 @@
 let f1 = {
-    "Name" : "Joey",
-    "Age" : 30,
-    "FavoriteDialogue" : "How you Doing !!"
+  'Name' : 'Joey',
+  'Age' : 30,
+  'FavoriteDialogue' : 'How you Doing !!'
 };
 
 let f1ToString = JSON.stringify(f1);
