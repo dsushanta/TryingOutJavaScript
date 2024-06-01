@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server",
     "lint": "eslint . --ext .ts"
@@ -12,5 +13,9 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.4.5"
   }
 }

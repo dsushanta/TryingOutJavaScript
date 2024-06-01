@@ -2,11 +2,18 @@
 // Object properties can be both primitive values, other objects, and functions.
 // JavaScript objects are mutable
 
-let friends_joey = {
+/*let friends_joey = {
   'Name' : 'Joey Tribbiani',
   'Age' : 30,
   'FavoriteDialogue' : 'How you Doing !!',
   'Series' : function(){return 'Friends';}
+};*/
+
+let friends_joey = {
+  Name : 'Joey Tribbiani',
+  Age : 30,
+  'FavoriteDialogue' : 'How you Doing !!',
+  Series : function(){return 'Friends';}
 };
 
 console.log(`${friends_joey.Name}'s favorite dialogue : ${friends_joey.FavoriteDialogue}`);

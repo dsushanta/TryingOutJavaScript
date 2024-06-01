@@ -1,5 +1,4 @@
-
-const fetch = require("node-fetch");
+import fetch from 'node-fetch';
 
 const usersUrl = "https://gorest.co.in/public-api/users";
 let todoUrl = "https://gorest.co.in/public-api/users/USER_ID/todos";
@@ -27,7 +26,7 @@ const getUsersFirstTodo = (userId) => {
     });
 };
 
-let email = "tushar_chaturvedi@conroy.biz";
+let email = "achari_tushar@crist.example";
 getUserId(email)
     .then(userId => getUsersFirstTodo(userId))
     .then(firstTodo => console.log(firstTodo))

@@ -1,13 +1,13 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const usersUrl = "https://gorest.co.in/public-api/users";
 let todoUrl = "https://gorest.co.in/public-api/users/USER_ID/todos";
 
 const getUserId = async (userEmail) => {
-    //const allUsers = await fetch(usersUrl);
-  const allUsers = { email: 'abc@z.com' }
+    const allUsers = await fetch(usersUrl);
+  // const allUsers = { email: 'abc@z.com' }
     let userId;
-    let json = allUsers;
+    let json = await allUsers.json();
     json.data.map((userObject) => {
       if (userObject.email.includes(userEmail)) {
         userId = userObject.id;
@@ -29,5 +29,5 @@ const displayUsersFirstTodo = async (email) => {
     console.log(firstTodo);
 };
 
-let email = "esha_dvm_verma@jenkins-streich.biz";
+let email = "achari_tushar@crist.example";
 displayUsersFirstTodo(email);

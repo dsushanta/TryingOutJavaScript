@@ -10,7 +10,7 @@ class Person {
   constructor(private firstName: string, private age: number) {
   }
 
-  get FirstName(): string{
+  get FirstName(): string {
     return this.firstName;
   }
 	
@@ -18,7 +18,7 @@ class Person {
     this.firstName = firstName;
   }
 
-  get Age(): number{
+  get Age(): number {
     return this.age;
   }
 	

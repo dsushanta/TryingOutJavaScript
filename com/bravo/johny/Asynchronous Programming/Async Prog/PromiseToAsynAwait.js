@@ -1,26 +1,28 @@
 async function login(email, pwd) {
   let userObject;
-  setTimeout((_) => {
+    setTimeout((_) => {
     if (email.includes("@")) {
       console.log(email);
-      userObject = { "email": email };
+      userObject = { email: email };
     }
   }, 3000);
-  return userObject;
+  return await userObject;
 }
 
 async function getUserName(email) {
-  setTimeout((_) => {
-    let userName = email.split("@")[0];
-    console.log(userName);
+  let userName;
+    setTimeout((_) => {
+        userName = email.split("@")[0];
+        console.log(userName);
   }, 2000);
   return await userName;
 }
 
 async function getVideos(userName) {
-  setTimeout((_) => {
-    const videoIds = ["videoId1", "videoId2", "videoId3"];
-    console.log(videoIds);
+  let videoIds;
+    setTimeout((_) => {
+        videoIds = ["videoId1", "videoId2", "videoId3"];
+        console.log(videoIds);
   }, 2000);
   return await videoIds;
 }

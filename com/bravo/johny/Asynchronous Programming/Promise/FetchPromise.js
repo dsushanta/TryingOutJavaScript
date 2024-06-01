@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 const url = "https://reqres.in/api/users?page=2";
 
 const isStatus200 = function (res) {

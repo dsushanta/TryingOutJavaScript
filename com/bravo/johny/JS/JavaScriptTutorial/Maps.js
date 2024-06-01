@@ -17,9 +17,9 @@ let f3 = {
 
 let friends = new Map();
 
-friends.set('f1', f1);
-friends.set('f2', f2);
-friends.set('f3', f3);
+friends.set('f11', f1);
+friends.set('f22', f2);
+friends.set('f33', f3);
 //console.log(friends);
 console.log(friends.size);
 
@@ -34,3 +34,5 @@ console.log(friends.size);
 friends.forEach((v, k, l, m) =>
   console.log(k + ' : ' + v.Name + ' : ' + l + ' : ' + m)
 );
+
+friends.forEach((a,b) => console.log(b, ' : ', a.Name))

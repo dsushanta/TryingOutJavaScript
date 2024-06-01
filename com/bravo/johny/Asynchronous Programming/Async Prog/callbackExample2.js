@@ -1,4 +1,5 @@
-function f() {
+const f = () => {
+    console.log("Inside function")
     setTimeout((_) => {
         console.log("Hello World");
   }, 5000);
