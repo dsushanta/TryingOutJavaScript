@@ -1,45 +1,150 @@
 async function login(email, pwd) {
-  let userObject;
-    setTimeout((_) => {
-    if (email.includes("@")) {
-      console.log(email);
-      userObject = { email: email };
-    }
-  }, 3000);
-  return await userObject;
+    return new Promise(resolve => {
+        setTimeout((_) => {
+            if (email.includes("@")) {
+                console.log(email);
+                let userObject = { email: email };
+                resolve(userObject);
+            }
+        }, 6000);
+    });
 }
 
 async function getUserName(email) {
-  let userName;
-    setTimeout((_) => {
-        userName = email.split("@")[0];
-        console.log(userName);
-  }, 2000);
-  return await userName;
+    return new Promise(resolve => {
+        setTimeout((_) => {
+            let userName = email.split("@")[0];
+            console.log(userName);
+            resolve(userName);
+        }, 2000);
+    });
 }
 
-async function getVideos(userName) {
-  let videoIds;
-    setTimeout((_) => {
-        videoIds = ["videoId1", "videoId2", "videoId3"];
-        console.log(videoIds);
-  }, 2000);
-  return await videoIds;
+async function getVideos(username) {
+    return new Promise(resolve => {
+        setTimeout((_) => {
+            let videoIds = [`${username} - videoId-1`, `${username} - videoId-2`, `${username} - videoId-3`];
+            console.log(videoIds);
+            resolve(videoIds);
+        }, 2000);
+    });
 }
 
 async function getVideoTitle(videoTitle) {
-  setTimeout((_) => {
-      console.log("Title of VIdeo 1");
-    }, 2000);
+    return new Promise(resolve => {
+        setTimeout((_) => {
+            let videoTitle = "Title of Video";
+            console.log(videoTitle);
+            resolve(videoTitle);
+        }, 2000);
+    });
 }
 
 async function getVideoTitleFromUser() {
     try {
         const user = await login("johnyb@cartoonnetwork.com", "ohhmama");
-        console.log("hello");
+        console.log("hello 1");
         const userName = await getUserName(user.email);
+        console.log("hello 2");
         const videoIds = await getVideos(userName);
+        console.log("hello 3");
         const videoTitle = await getVideoTitle(videoIds[0]);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+
+async function getUserNames1() {
+    try {
+        const users = [
+            'chandlerbing@friends.com',
+            'joeytribbiani@friends.com',
+            'monicagellar@friends.com',
+            'rossgellar@friends.com',
+            'rachelgreen@friends.com',
+            'phoebebuffay@friends.com'
+        ];
+        for (let i=0; i<users.length; i++) {
+            let userObject = await login(users[i], "");
+            console.log("hello 1 ", userObject.email);
+            const userName = await getUserName(userObject.email);
+            console.log("hello 2", userName);
+            const videoIds = await getVideos(userName);
+            console.log("-------------------------------------------");
+        };
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+
+async function getUserNames2() {
+    try {
+        const users = [
+            'chandlerbing@friends.com',
+            'joeytribbiani@friends.com',
+            'monicagellar@friends.com',
+            'rossgellar@friends.com',
+            'rachelgreen@friends.com',
+            'phoebebuffay@friends.com'
+        ];
+        for (let i=0; i<users.length; i++) {
+            await asyncCall(users[i]);
+        };
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+
+const asyncCall = async user => {
+    let userObject = await login(user, "");
+    console.log("hello 1 ", userObject.email);
+    const userName = await getUserName(userObject.email);
+    console.log("hello 2", userName);
+    const videoIds = await getVideos(userName);
+    console.log("-------------------------------------------");
+}
+
+async function getUserNames3() {
+    try {
+        const users = [
+            'chandlerbing@friends.com',
+            'joeytribbiani@friends.com',
+            'monicagellar@friends.com',
+            'rossgellar@friends.com',
+            'rachelgreen@friends.com',
+            'phoebebuffay@friends.com'
+        ];
+        users.map(async user => {
+            let userObject = await login(user, "");
+            console.log("hello 1 ", userObject.email);
+            const userName = await getUserName(userObject.email);
+            console.log("hello 2", userName);
+            const videoIds = await getVideos(userName);
+            console.log("-------------------------------------------");
+        });
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+
+async function getUserNames4() {
+    try {
+        const users = [
+            'chandlerbing@friends.com',
+            'joeytribbiani@friends.com',
+            'monicagellar@friends.com',
+            'rossgellar@friends.com',
+            'rachelgreen@friends.com',
+            'phoebebuffay@friends.com'
+        ];
+        users.forEach(async user => {
+            let userObject = await login(user, "");
+            console.log("hello 1 ", userObject.email);
+            const userName = await getUserName(userObject.email);
+            console.log("hello 2", userName);
+            const videoIds = await getVideos(userName);
+            console.log("-------------------------------------------");
+        });
     } catch (err) {
         console.log(err.message);
     }
@@ -47,6 +152,6 @@ async function getVideoTitleFromUser() {
 
 console.log("Start");
 
-getVideoTitleFromUser();
+getUserNames1();
 
 console.log("End");
