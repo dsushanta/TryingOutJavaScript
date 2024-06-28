@@ -31,4 +31,9 @@ export const checkPrime = (num: number): boolean => {
     return true;
 }
 
-// Write a function that takes an array of integers as input and returns a new array with only the unique elements
+// Write a function that takes an array of integers as input and deletes the middle element
+
+export const deleteMiddleElement = (numbers: number[]): number[] => {
+    let middleIndex = Math.floor(numbers.length / 2);
+    return numbers.filter((num, index) => index != middleIndex);
+}

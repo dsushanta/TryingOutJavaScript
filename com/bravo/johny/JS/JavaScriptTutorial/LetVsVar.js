@@ -36,3 +36,6 @@ console.log(e);
 console.log(f);
 console.log(global.f);
 console.log(global.e);
+
+const a1;
+a1 = 7;

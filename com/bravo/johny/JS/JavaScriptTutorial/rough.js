@@ -5,10 +5,17 @@
 //   console.log(i + ' : ' + j + ' : ' + k + ' : ' + l);
 // });
 
-let str = "my name is Nikhil"
+// let str = "my name is Nikhil"
+//
+// function rev(strr) {
+//   return strr.split(" ").map(e => e.split("").reverse().join("")).join(" ")
+// }
+//
+// console.log(rev(str))
 
-function rev(strr) {
-  return strr.split(" ").map(e => e.split("").reverse().join("")).join(" ")
-}
+new Promise((resolve) => {
+  console.log(1);
+  resolve(2);
+}).then((result) => console.log(result));
 
-console.log(rev(str))
+console.log(3);

@@ -3,7 +3,7 @@ function login(email, pwd) {
         setTimeout((_) => {
             if (email.includes("@")) {
                 console.log(email);
-                resolve({ email: email });
+                resolve({ email: email, status: 200});
             } else {
                 reject(new Error("Invalid Username / Password"));
             }
