@@ -2,6 +2,7 @@ name: Run F Tests
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   test:

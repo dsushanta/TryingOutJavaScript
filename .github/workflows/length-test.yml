@@ -2,6 +2,7 @@ name: Run Length Test
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   test:
