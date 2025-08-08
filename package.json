@@ -1,7 +1,14 @@
 {
-  "type": "module",
   "dependencies": {
     "fs": "^0.0.1-security",
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:f": "jest com/bravo/johny/JS/JavaScriptTutorial/f.test.js",
+    "test:length": "jest com/bravo/johny/JS/JavaScriptTutorial/length.test.js"
   }
 }
