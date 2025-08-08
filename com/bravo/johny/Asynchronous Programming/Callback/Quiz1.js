@@ -1,9 +1,11 @@
+
+const json = { name: "Joey", age: 30 }
 function doAsyncTask(cb) {
-  cb();
+  cb(json);
 }
 
-function x() {
-    console.log("Hello");
+function x(arg) {
+    console.log(arg);
 }
 
 doAsyncTask(x);

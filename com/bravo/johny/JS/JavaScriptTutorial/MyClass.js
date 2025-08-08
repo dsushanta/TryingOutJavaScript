@@ -9,6 +9,6 @@ class Friend {
   }
 }
 
-joey = new Friend("Joey", 30, "How you doing !!!");
+const joey = new Friend('Joey', 30, 'How you doing !!!');
 console.log(joey.getNameWithDialogue());
 console.log(joey);

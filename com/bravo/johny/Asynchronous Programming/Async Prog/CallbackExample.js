@@ -1,4 +1,4 @@
-vals = [1, 2, 3, 4];
+let vals = [1, 2, 3, 4];
 vals.forEach((element) => {
   console.log(element);
 });

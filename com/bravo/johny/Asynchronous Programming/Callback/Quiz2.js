@@ -1,11 +1,12 @@
-const fs = require("fs");
+import fs from 'fs';
 
 function readFileThenDo(next) {
-  fs.readFile("./blah.nofile", (err, data) => {
+  fs.readFile('./blah.nofile', (err, data) => {
     next(data);
   });
 }
+let d = "hello"
 
-readFileThenDo((data) => {
-  console.log(data);
+readFileThenDo((d) => {
+  console.log(d);
 });

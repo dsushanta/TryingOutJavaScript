@@ -1,4 +1,4 @@
-const { rejects } = require("assert");
+// const { rejects } = require("assert");
 
 function watchTutorialCallback(callback, errorCallback) {
   let userLeft = false;

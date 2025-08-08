@@ -1,4 +1,4 @@
-function login(email, pwd, callback) {
+const login = (email, pwd, callback, reject) => {
   setTimeout((_) => {
     if (email.includes("@")) {
       console.log(email);
@@ -9,7 +9,7 @@ function login(email, pwd, callback) {
   }, 3000);
 }
 
-function getUserName(email, callback) {
+const getUserName = (email, callback) => {
   setTimeout((_) => {
     let userName = email.split("@")[0];
     console.log(userName);
@@ -17,7 +17,7 @@ function getUserName(email, callback) {
   }, 2000);
 }
 
-function getVideos(userName, callback) {
+const getVideos = (userName, callback) => {
   setTimeout((_) => {
     let videoIds = ["videoId1", "videoId2", "videoId3"];
     console.log(videoIds);
@@ -25,7 +25,7 @@ function getVideos(userName, callback) {
   }, 2000);
 }
 
-function getVideoTitle(videoTitle, callback) {
+const getVideoTitle = (videoTitle, callback) => {
   setTimeout((_) => {
     callback("Title of Video 1");
   }, 2000);
@@ -33,14 +33,57 @@ function getVideoTitle(videoTitle, callback) {
 
 console.log("Start");
 
-login("johnyb@cartoonnetwork.com", "ohhmama", (userObject) => {
-  getUserName(userObject.email, (userName) => {
-    getVideos(userName, (videoIds) => {
-      getVideoTitle(videoIds[0], (title) => {
-        console.log(title);
-      });
-    });
-  });  
-});
+// 1st step
+login(
+    "johnyb@cartoonnetwork.com",
+    "ohhmama",
+    (userObject) => {
+      console.log(userObject)
+    },
+    err => console.log(err.message)
+);
+
+// 2nd Step
+login(
+    "johnyb@cartoonnetwork.com",
+    "ohhmama",
+    (userObject) => {
+      getUserName(userObject.email, (username) => {
+        console.log(username)
+      })
+    },
+    err => console.log(err.message)
+);
+
+// 3rd Step
+login(
+    "johnyb@cartoonnetwork.com",
+    "ohhmama",
+    (userObject) => {
+      getUserName(userObject.email, (username) => {
+        getVideos(username, (videoIds) => {
+          console.log(videoIds)
+        })
+      })
+    },
+    err => console.log(err.message)
+);
+
+// 4th Step
+// Callback hell : when a callback calls a function which passes another callback
+login(
+    "johnyb@cartoonnetwork.com",
+    "ohhmama",
+    (userObject) => {
+      getUserName(userObject.email, (username) => {
+        getVideos(username, (videoIds) => {
+          getVideoTitle(videoIds[0], title => {
+            console.log(title)
+          })
+        })
+      })
+    },
+    err => console.log(err.message)
+);
 
 console.log("End");
