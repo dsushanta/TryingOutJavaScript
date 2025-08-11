@@ -1,5 +1,5 @@
 const { length } = require('./Function');
 
-test('should return the length of a string', () => {
+test('should return the length of a stringg', () => {
   expect(length('hello')).toBe(5);
 });
