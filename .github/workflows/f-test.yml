@@ -19,8 +19,6 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./TryingOutJavaScript
 
     - name: Run f test
       run: npm run test:f
-      working-directory: ./TryingOutJavaScript
