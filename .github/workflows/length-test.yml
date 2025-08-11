@@ -2,8 +2,7 @@ name: length_test
 
 on:
   pull_request:
-    branches:
-      - develop
+    branches: [ develop ]
 
 jobs:
   test:
