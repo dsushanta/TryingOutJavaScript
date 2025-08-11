@@ -1,4 +1,4 @@
-name: Run F Tests
+name: fail_test
 
 on:
   pull_request:

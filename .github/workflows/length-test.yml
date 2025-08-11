@@ -1,4 +1,4 @@
-name: Run Length Test
+name: length_test
 
 on:
   pull_request:
