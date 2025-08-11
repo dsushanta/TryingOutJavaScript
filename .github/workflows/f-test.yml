@@ -2,6 +2,8 @@ name: Run F Tests
 
 on:
   pull_request:
+    branches:
+      - develop
   workflow_dispatch:
 
 jobs:
